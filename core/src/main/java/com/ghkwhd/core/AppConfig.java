@@ -2,6 +2,7 @@ package com.ghkwhd.core;
 
 import com.ghkwhd.core.discount.DiscountPolicy;
 import com.ghkwhd.core.discount.FixDiscountPolicy;
+import com.ghkwhd.core.discount.RateDiscountPolicy;
 import com.ghkwhd.core.member.MemberRepository;
 import com.ghkwhd.core.member.MemberService;
 import com.ghkwhd.core.member.MemberServiceImpl;
@@ -24,6 +25,7 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        //return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
