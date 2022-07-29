@@ -1,11 +1,19 @@
 package com.ghkwhd.core.member;
 
+import com.ghkwhd.core.AppConfig;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService;
+
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void join() {
@@ -20,7 +28,5 @@ class MemberServiceTest {
 
         // then : 어떤 결과가 나온다 (검증)
         Assertions.assertThat(member).isEqualTo(findMember);
-
     }
-
 }
