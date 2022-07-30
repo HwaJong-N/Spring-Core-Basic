@@ -2,12 +2,9 @@ package com.ghkwhd.core.singleton;
 
 import com.ghkwhd.core.AppConfig;
 import com.ghkwhd.core.member.MemberRepository;
-import com.ghkwhd.core.member.MemberService;
 import com.ghkwhd.core.member.MemberServiceImpl;
 import com.ghkwhd.core.member.MemoryMemberRepository;
 import com.ghkwhd.core.order.OrderServiceImpl;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
