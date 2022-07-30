@@ -6,19 +6,16 @@ import com.ghkwhd.core.discount.RateDiscountPolicy;
 import com.ghkwhd.core.member.Member;
 import com.ghkwhd.core.member.MemberRepository;
 import com.ghkwhd.core.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor    // final이 붙은 필드를 모아서 생성자를 자동으로 만들어준다
 public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
 
     // 주문 결과 반환
     @Override
