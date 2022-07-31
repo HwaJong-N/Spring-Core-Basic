@@ -57,7 +57,7 @@ public class SingletonWithPrototypeTest1 {
         }
     }
 
-    
+
 
     @Scope("prototype")
     static class PrototypeBean {
