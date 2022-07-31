@@ -1,10 +1,14 @@
 package com.ghkwhd.core.discount;
 
+import com.ghkwhd.core.annotation.MainDiscountPolicy;
 import com.ghkwhd.core.member.Grade;
 import com.ghkwhd.core.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;
